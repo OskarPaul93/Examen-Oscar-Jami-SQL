@@ -11,12 +11,12 @@ public class Socio {
 
     @Id
     @Column(name = "id_socio")
-    private Integer id;
+    private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String nombres;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String apellidos;
 
     @Column(nullable = false)
@@ -25,12 +25,10 @@ public class Socio {
     @Column(nullable = false)
     private boolean activo;
 
-    // Constructor vacío
     public Socio() {
     }
 
-    // Constructor con parámetros
-    public Socio(Integer id, String nombres, String apellidos,
+    public Socio(Long id, String nombres, String apellidos,
                  int edad, boolean activo) {
         this.id = id;
         this.nombres = nombres;
@@ -39,16 +37,14 @@ public class Socio {
         this.activo = activo;
     }
 
-    // Getter y setter de id
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    // Getter y setter de nombres
     public String getNombres() {
         return nombres;
     }
@@ -57,7 +53,6 @@ public class Socio {
         this.nombres = nombres;
     }
 
-    // Getter y setter de apellidos
     public String getApellidos() {
         return apellidos;
     }
@@ -66,7 +61,6 @@ public class Socio {
         this.apellidos = apellidos;
     }
 
-    // Getter y setter de edad
     public int getEdad() {
         return edad;
     }
@@ -75,7 +69,6 @@ public class Socio {
         this.edad = edad;
     }
 
-    // Getter y setter de activo
     public boolean isActivo() {
         return activo;
     }
